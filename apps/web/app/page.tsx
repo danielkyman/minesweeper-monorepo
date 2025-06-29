@@ -137,7 +137,7 @@ export default function MineSweeper() {
       case CellStatus.FLAGGED:
         return <Flag className="w-4 h-4 text-red-500" />;
       case CellStatus.DETONATED:
-        return <Bomb className="w-4 h-4 text-red-600" />;
+        return <Bomb className="w-4 h-4 text-black" />;
       case CellStatus.REVEALED:
         if (c.isMine) return <Bomb className="w-4 h-4 text-gray-600" />;
         return c.neighboringBombCount ? c.neighboringBombCount : null;
@@ -249,8 +249,8 @@ export default function MineSweeper() {
                       game.status === GameStatus.WON
                         ? "default"
                         : game.status === GameStatus.LOST
-                        ? "destructive"
-                        : "secondary"
+                          ? "destructive"
+                          : "secondary"
                     }
                   >
                     {game.status.replace("_", " ")}
