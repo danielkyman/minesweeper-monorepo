@@ -20,7 +20,7 @@ This implementation delivers a complete backend and frontend system for playing 
 - Accepts validated input via `CreateGameDto` (`rows`, `cols`, `mines`)
 - Validates bounds on grid dimensions and mine count
 - Generates a board using `MinesweeperEngine.createBoard`
-- Persists `Game` and `GameCell` records in a single transaction
+- Persists `Game` and `GameCell` records
 - Returns a masked view of the board (only exposed fields necessary to client)
 
 ### 2. **List Games** (`GET /game`)
