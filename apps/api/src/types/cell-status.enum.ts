@@ -1,0 +1,6 @@
+export enum CellStatus {
+  HIDDEN = 'HIDDEN',
+  REVEALED = 'REVEALED',
+  FLAGGED = 'FLAGGED',
+  DETONATED = 'DETONATED',
+}

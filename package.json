@@ -1,0 +1,19 @@
+{
+  "name": "minesweeper-demo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "yarn db:up && turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint --parallel",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down"
+  },
+  "packageManager": "yarn@4.9.2",
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  }
+}
